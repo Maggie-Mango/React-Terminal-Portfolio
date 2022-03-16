@@ -1,41 +1,44 @@
 import React, { useState } from 'react';
 import Terminal, { ColorMode, LineType } from 'react-terminal-ui';
 import Typewriter from 'typewriter-effect';
+import Resume from './Components/Resume.js'
 
-const Openingmessage =
-<>
-  <Typewriter
-  onInit={(typewriter) => {
-    typewriter.typeString('Hi! 👋 My name is Maggie, a full-stack engineer based in NYC 🗽')
-      .callFunction(() => {
-        console.log('String typed out!');
-      })
-      .pauseFor(2500)
-      .start();
-  }}
-  />
-  <br />
-</>
+const App = (props = {}) => {
 
-const instructions =
-<>
-  Type the following commands to see more:
-  <br />
-    Resume&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    Soundtok&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    Atelier&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    APIquestions&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  <br />
-  <br />
-</>
+  const Openingmessage =
+    <>
+      <Typewriter
+      onInit={(typewriter) => {
+        typewriter.typeString('Hi! 👋 My name is Maggie, a full-stack engineer based in NYC 🗽')
+          .callFunction(() => {
+            console.log('String typed out!');
+          })
+          .pauseFor(2500)
+          .start();
+      }}
+      />
+      <br />
+    </>
 
-const terminal = [
-  {type: LineType.Output, value: Openingmessage},
-  {type: LineType.Output, value: instructions},
-  {type: LineType.Input, value: 'Get in touch 💌 maggiesaldivia@gmail.com' }
-]
+    const instructions =
+      <>
+        Type the following commands to see more:
+        <br />
+          Resume&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          SoundTok&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          Atelier&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          APIquestions&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <br />
+        <br />
+      </>
 
-const TerminalController = (props = {}) => {
+    const terminal = [
+      {type: LineType.Output, value: Openingmessage},
+      {type: LineType.Output, value: instructions},
+      {type: LineType.Input, value: 'Get in touch 💌 maggiesaldivia@gmail.com' }
+    ]
+
+
   const [terminalLineData, setTerminalLineData] = useState(terminal);
   const [modal, setModal] = useState(null)
 
@@ -43,7 +46,7 @@ const TerminalController = (props = {}) => {
     terminal.push( {type: LineType.Output, value: `$ visiting Resume...`} )
     return (
       <>
-      <p>resume placeholder</p>
+      <Resume />
     </>
     )
   }
@@ -92,4 +95,4 @@ const TerminalController = (props = {}) => {
 
 }
 
-export default TerminalController
+export default App
