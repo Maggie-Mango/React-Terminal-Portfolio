@@ -6,7 +6,7 @@ const Openingmessage =
 <>
   <Typewriter
   onInit={(typewriter) => {
-    typewriter.typeString('Hi! 👋 My name is Maggie, a full-stack engineer based in New York City 🗽 Feel free to reach out to me at 💌maggiesaldivia@gmail.com for opporitunities')
+    typewriter.typeString('Hi! 👋 My name is Maggie, a full-stack engineer based in NYC 🗽')
       .callFunction(() => {
         console.log('String typed out!');
       })
@@ -19,7 +19,7 @@ const Openingmessage =
 
 const instructions =
 <>
-  Type the following to see more:
+  Type the following commands to see more:
   <br />
     Resume&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     Soundtok&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -29,28 +29,28 @@ const instructions =
   <br />
 </>
 
-
+const terminal = [
+  {type: LineType.Output, value: Openingmessage},
+  {type: LineType.Output, value: instructions},
+  {type: LineType.Input, value: 'Get in touch 💌maggiesaldivia@gmail.com' }
+]
 
 const TerminalController = (props = {}) => {
-  const [terminalLineData, setTerminalLineData] = useState([
-    {type: LineType.Output, value: Openingmessage},
-    {type: LineType.Output, value: instructions},
-    {type: LineType.Input, value: 'Created with React App 💖 Best viewed on Web' },
-  ]);
+  const [terminalLineData, setTerminalLineData] = useState(terminal);
+  const [openLink, setOpenLink] = useState(null)
   // Terminal has 100% width by default so it should usually be wrapped in a container div
 
 
-
+  console.log(openLink)
   return (
     <div className="container">
-
       <Terminal
         name='MAGGIE SALDIVIA PORTFOLIO'
         colorMode={ ColorMode.Light }
         lineData={ terminalLineData }
-        onInput={ terminalInput => console.log(`New terminal input received: '${ terminalInput }'`) }
+        onInput={ terminalInput => { terminal.indexOf(terminalInput) > -1 ? terminal.push( {type: LineType.Output, value: terminalInput}  ) : terminal.push( {type: LineType.Output, value: `-bash:  ${terminalInput}: command not found`} )}
+        }
       />
-
     </div>
   )
 }
