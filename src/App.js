@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
 import Terminal, { ColorMode, LineType } from 'react-terminal-ui';
 import Typewriter from 'typewriter-effect';
-import Resume from './Components/Resume.js'
-import Soundtok from './Components/Soundtok.js'
+import Resume from './Components/Resume.js';
+import Soundtok from './Components/Soundtok.js';
+import Atelier from './Components/Atelier.js';
+import APIQuestions from './Components/APIQuestions.js';
+
 
 const App = (props = {}) => {
 
@@ -65,7 +68,7 @@ const App = (props = {}) => {
     terminal.push( {type: LineType.Output, value: `$ visiting Atelier...`} )
     return (
       <>
-      <p>atelier placeholder</p>
+      <Atelier />
     </>
     )
   }
@@ -74,7 +77,7 @@ const App = (props = {}) => {
     terminal.push( {type: LineType.Output, value: `$ visiting API questions...`} )
     return (
       <>
-      <p>backend placeholder</p>
+      <APIQuestions />
     </>
     )
   }

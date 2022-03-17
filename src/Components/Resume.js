@@ -3,8 +3,6 @@ import { Document, Page, pdfjs } from 'react-pdf/dist/esm/entry.webpack';
 import Maggie from './Maggie.pdf'
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
 
-
-
 const Resume = () => {
   const [numPages, setNumPages] = useState(null);
   const [pageNumber, setPageNumber] = useState(1);
