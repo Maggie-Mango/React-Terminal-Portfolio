@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Terminal, { ColorMode, LineType } from 'react-terminal-ui';
 import Typewriter from 'typewriter-effect';
 import Resume from './Components/Resume.js'
+import Soundtok from './Components/Soundtok.js'
 
 const App = (props = {}) => {
 
@@ -55,7 +56,7 @@ const App = (props = {}) => {
     terminal.push( {type: LineType.Output, value: `$ visiting SoundTok...`} )
     return (
       <>
-      <p>soundtok placeholder</p>
+      <Soundtok />
     </>
     )
   }
