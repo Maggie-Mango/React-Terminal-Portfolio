@@ -7,8 +7,6 @@ import Atelier from './Components/Atelier.js';
 import APIQuestions from './Components/APIQuestions.js';
 
 
-const App = (props = {}) => {
-
   const Openingmessage =
     <>
       <Typewriter
@@ -42,6 +40,9 @@ const App = (props = {}) => {
       {type: LineType.Input, value: 'Get in touch 💌 maggiesaldivia@gmail.com' }
     ]
 
+
+
+const App = (props = {}) => {
 
   const [terminalLineData, setTerminalLineData] = useState(terminal);
   const [modal, setModal] = useState(null)
