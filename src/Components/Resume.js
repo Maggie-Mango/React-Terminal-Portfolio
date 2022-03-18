@@ -14,15 +14,16 @@ const Resume = () => {
   }
 
   return (
-    <>
-
-    <p>$ Type here</p>
-      <div class="resume">
+    <div class="resume">
+      <h2>Maggie's Resume</h2>
+      <p>$ Type back to head back to the main page: </p>
+      <p>Below you'll find my resume. You can also download the PDF version <a href={Maggie} download>here</a>.</p>
+      <div id="pdf">
         <Document file={Maggie} onLoadSuccess={onDocumentLoadSuccess}>
           <Page pageNumber={pageNumber} />
         </Document>
       </div>
-    </>
+    </div>
   );
 }
 

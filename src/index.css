@@ -13,11 +13,16 @@ code {
 }
 
 .container {
+  margin: 0;
   background: #ddd;
   padding-top: 0%;
 }
 
 .resume {
+  padding-top: 20px;
+}
+
+#pdf {
   width: 50%;
   margin-left: auto;
   margin-right: auto;
