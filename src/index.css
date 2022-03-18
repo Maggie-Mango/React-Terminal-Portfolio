@@ -16,11 +16,53 @@ code {
   margin: 0;
   background: #ddd;
   padding-top: 0%;
+  font-size: 18px;
+  font-family: 'Fira Mono', Consolas, Menlo, Monaco, 'Courier New', Courier, monospace;
 }
 
 .resume {
   padding-top: 20px;
+  margin-left: 40px;
 }
+
+#moneysign {
+  color: #D76D77;
+}
+
+#title {
+  text-align: center;
+  margin-top: 0;
+  margin-left: 0;
+  color: #D76D77
+}
+
+.react-terminal-input[data-terminal-prompt]:before {
+  content: attr(data-terminal-prompt);
+}
+
+.resume:focus-within .react-terminal-active-input:after {
+  content: '▋';
+  font-family: monospace;
+  margin-left: 0.2em;
+  -webkit-animation: blink 1s infinite;
+          animation: blink 1s infinite;
+}
+
+/* Cursor animation */
+
+@-webkit-keyframes blink {
+  50% {
+      opacity: 0;
+  }
+}
+
+@keyframes blink {
+  50% {
+      opacity: 0;
+  }
+}
+
+
 
 #pdf {
   width: 50%;

@@ -15,8 +15,8 @@ const Resume = () => {
 
   return (
     <div class="resume">
-      <h2>Maggie's Resume</h2>
-      <p>$ Type back to head back to the main page: </p>
+      <p id="title">MAGGIE'S RESUME</p>
+      <p><span id="moneysign">$</span> Type back to head back to the main page </p>
       <p>Below you'll find my resume. You can also download the PDF version <a href={Maggie} download>here</a>.</p>
       <div id="pdf">
         <Document file={Maggie} onLoadSuccess={onDocumentLoadSuccess}>
