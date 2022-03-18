@@ -26,9 +26,12 @@ import APIQuestions from './Components/APIQuestions.js';
       <>
         Type the following commands to see more:
         <br />
+        <br />
           Resume&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          SoundTok&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          Atelier&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          AboutMe&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <br />
+          Soundtok&nbsp;&nbsp;&nbsp;&nbsp;
+          Atelier&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           APIquestions&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <br />
         <br />
