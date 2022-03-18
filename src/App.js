@@ -13,11 +13,8 @@ import APIQuestions from './Components/APIQuestions.js';
       <Typewriter
       onInit={(typewriter) => {
         typewriter.typeString('Hi! 👋 My name is Maggie, a full-stack engineer based in NYC 🗽')
-          .callFunction(() => {
-            console.log('String typed out!');
-          })
           .pauseFor(2500)
-          .start();
+          .start()
       }}
       />
       <br />
