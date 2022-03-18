@@ -26,13 +26,13 @@ const Resume = () => {
     )
   }
 
-  console.log(input)
   return (
-    <div className="resume">
+    <div className="padding">
       <Intro
         inputCb={updateInput}
         title="MAGGIE'S RESUME"
-        inputLine="Below you can find my resume. You can also download the PDF version <a href={Maggie} download>here</a>." />
+        inputLine="Below you can find my resume. You can also download the PDF version <a href={Maggie} download>here</a>."
+      />
       <div id="pdf">
         <Document file={Maggie} onLoadSuccess={onDocumentLoadSuccess}>
           <Page pageNumber={pageNumber} />

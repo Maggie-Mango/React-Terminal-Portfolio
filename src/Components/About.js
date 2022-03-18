@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import Intro from './Intro.js';
 import App from '../App.js';
 
-const APIQuestions = () => {
+
+const About = () => {
   const [input, setInput] = useState("")
 
   function updateInput(input) {
@@ -19,8 +20,8 @@ const APIQuestions = () => {
     <div className="padding">
       <Intro
         inputCb={updateInput}
-        title="Atelier E-Commerce"
-        inputLine="A front-end e-commerce app with customer question + answer and review modals"
+        title="About Me"
+        inputLine="I used to be frightened by anything 'technical', now it's my creative outlet."
       />
       <div>
         <p>insert example</p>
@@ -29,4 +30,4 @@ const APIQuestions = () => {
   );
 }
 
-export default APIQuestions;
+export default  About;

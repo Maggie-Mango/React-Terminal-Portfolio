@@ -4,6 +4,7 @@ import Typewriter from 'typewriter-effect';
 import Resume from './Components/Resume.js';
 import Soundtok from './Components/Soundtok.js';
 import Atelier from './Components/Atelier.js';
+import About from './Components/About.js';
 import APIQuestions from './Components/APIQuestions.js';
 
 
@@ -50,10 +51,21 @@ const App = (props = {}) => {
   const [terminalLineData, setTerminalLineData] = useState(terminal);
   const [modal, setModal] = useState(null)
 
+
+  if (modal === 'aboutme') {
+    return (
+      <>
+      <div className="container">
+        <About />
+      </div>
+    </>
+    )
+  }
+
   if (modal === 'resume') {
     return (
       <>
-      <div class="container">
+      <div className="container">
         <Resume />
       </div>
     </>
@@ -63,7 +75,7 @@ const App = (props = {}) => {
   if (modal === 'soundtok') {
     return (
       <>
-      <div class="container">
+      <div className="container">
         <Soundtok />
       </div>
       </>
@@ -73,7 +85,7 @@ const App = (props = {}) => {
   if (modal === 'atelier') {
     return (
       <>
-        <div class="container">
+        <div className="container">
           <Atelier />
         </div>
       </>

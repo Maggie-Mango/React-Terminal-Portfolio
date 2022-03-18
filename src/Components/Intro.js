@@ -17,11 +17,11 @@ const Intro = ({inputCb, title, inputLine}) => {
   },[input])
 
   return (
-    <>
+    <div className="padding">
       <p id="title">{title}</p>
       <p><span id="moneysign">$ </span><span dangerouslySetInnerHTML={{ __html: inputLine }}></span></p>
-      <p><span id="moneysign">$ </span>Typing in "back" will automatically take you to the main page <input type="text" onChange={e => setInput(e.target.value)} ref={inputRef}  value={input} /></p>
-    </>
+      <p id="italic"><span id="moneysign">$ </span>Typing in "back" will automatically take you to the main page <input type="text" onChange={e => setInput(e.target.value)} ref={inputRef}  value={input} /></p>
+    </div>
   )
 }
 
