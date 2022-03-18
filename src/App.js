@@ -50,7 +50,9 @@ const App = (props = {}) => {
     terminal.push( {type: LineType.Output, value: `$ visiting Resume...`} )
     return (
       <>
-      <Resume />
+      <div class="container">
+        <Resume />
+      </div>
     </>
     )
   }
@@ -59,8 +61,10 @@ const App = (props = {}) => {
     terminal.push( {type: LineType.Output, value: `$ visiting SoundTok...`} )
     return (
       <>
-      <Soundtok />
-    </>
+      <div class="container">
+        <Soundtok />
+      </div>
+      </>
     )
   }
 
@@ -68,8 +72,10 @@ const App = (props = {}) => {
     terminal.push( {type: LineType.Output, value: `$ visiting Atelier...`} )
     return (
       <>
-      <Atelier />
-    </>
+        <div class="container">
+          <Atelier />
+        </div>
+      </>
     )
   }
 
@@ -77,8 +83,10 @@ const App = (props = {}) => {
     terminal.push( {type: LineType.Output, value: `$ visiting API questions...`} )
     return (
       <>
-      <APIQuestions />
-    </>
+      <div class="container">
+        <APIQuestions />
+      </div>
+      </>
     )
   }
 

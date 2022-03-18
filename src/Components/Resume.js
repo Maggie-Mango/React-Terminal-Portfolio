@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { Document, Page, pdfjs } from 'react-pdf/dist/esm/entry.webpack';
+import Terminal, { ColorMode, LineType } from 'react-terminal-ui';
+
 import Maggie from './Maggie.pdf'
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
 
@@ -12,11 +14,15 @@ const Resume = () => {
   }
 
   return (
-    <div>
-      <Document file={Maggie} onLoadSuccess={onDocumentLoadSuccess}>
-        <Page pageNumber={pageNumber} />
-      </Document>
-    </div>
+    <>
+
+    <p>$ Type here</p>
+      <div class="resume">
+        <Document file={Maggie} onLoadSuccess={onDocumentLoadSuccess}>
+          <Page pageNumber={pageNumber} />
+        </Document>
+      </div>
+    </>
   );
 }
 
