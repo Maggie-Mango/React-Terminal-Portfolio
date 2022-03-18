@@ -34,21 +34,20 @@ import APIQuestions from './Components/APIQuestions.js';
         <br />
       </>
 
-    const terminal = [
-      {type: LineType.Output, value: Openingmessage},
-      {type: LineType.Output, value: instructions},
-      {type: LineType.Input, value: 'Get in touch 💌 maggiesaldivia@gmail.com' }
-    ]
+
 
 
 
 const App = (props = {}) => {
-
+  const terminal = [
+    {type: LineType.Output, value: Openingmessage},
+    {type: LineType.Output, value: instructions},
+    {type: LineType.Input, value: 'Get in touch 💌 maggiesaldivia@gmail.com' }
+  ]
   const [terminalLineData, setTerminalLineData] = useState(terminal);
   const [modal, setModal] = useState(null)
 
   if (modal === 'resume') {
-    terminal.push( {type: LineType.Output, value: `$ visiting Resume...`} )
     return (
       <>
       <div class="container">
@@ -59,7 +58,6 @@ const App = (props = {}) => {
   }
 
   if (modal === 'soundtok') {
-    terminal.push( {type: LineType.Output, value: `$ visiting SoundTok...`} )
     return (
       <>
       <div class="container">
@@ -70,7 +68,6 @@ const App = (props = {}) => {
   }
 
   if (modal === 'atelier') {
-    terminal.push( {type: LineType.Output, value: `$ visiting Atelier...`} )
     return (
       <>
         <div class="container">
@@ -81,7 +78,6 @@ const App = (props = {}) => {
   }
 
   if (modal === 'apiquestions') {
-    terminal.push( {type: LineType.Output, value: `$ visiting API questions...`} )
     return (
       <>
       <div class="container">
