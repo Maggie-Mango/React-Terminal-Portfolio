@@ -22,3 +22,4 @@ const Atelier = () => {
 }
 
 export default Atelier;
+

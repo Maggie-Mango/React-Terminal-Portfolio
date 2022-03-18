@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { Document, Page, pdfjs } from 'react-pdf/dist/esm/entry.webpack';
 import Terminal, { ColorMode, LineType } from 'react-terminal-ui';
 
@@ -9,15 +9,21 @@ const Resume = () => {
   const [numPages, setNumPages] = useState(null);
   const [pageNumber, setPageNumber] = useState(1);
 
+  const inputRef = useRef(null);
+
+  useEffect(() => {
+    inputRef.current.focus();
+  },[])
+
   function onDocumentLoadSuccess({ numPages }) {
     setNumPages(numPages);
   }
 
   return (
-    <div class="resume">
+    <div className="resume">
       <p id="title">MAGGIE'S RESUME</p>
-      <p><span id="moneysign">$</span> Type back to head back to the main page </p>
-      <p>Below you'll find my resume. You can also download the PDF version <a href={Maggie} download>here</a>.</p>
+      <p><span id="moneysign">$</span> Below you can find my resume. You can also download the PDF version <a href={Maggie} download>here</a>.</p>
+      <p><span id="moneysign">$</span> Type back to head back to the main page <input type="text" ref={inputRef}  contenteditable="true" /></p>
       <div id="pdf">
         <Document file={Maggie} onLoadSuccess={onDocumentLoadSuccess}>
           <Page pageNumber={pageNumber} />
