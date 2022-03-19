@@ -37,6 +37,7 @@ const Atelier = () => {
       />
       <div>
           <img src="https://res.cloudinary.com/dousz4spf/image/upload/v1647481725/Atelier.gif" style={styles.img}  alt="atelier gif" />
+          <img src="https://res.cloudinary.com/dousz4spf/image/upload/v1647648124/2022-03-16_22.02.52_avctjr.gif" style={styles.img}  alt="atelier gif" />
       </div>
     </div>
   );
