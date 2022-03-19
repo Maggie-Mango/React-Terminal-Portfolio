@@ -50,7 +50,7 @@ const About = () => {
           <h2>Why do you want to be a software engineer?</h2>
           <p>Having the ability to build the app or feature you wish existed feels like a superpower. I also love to teach and enjoy breaking down data science and programming concepts for those who want to learn.</p>
           <h2>What languages and frameworks do you like best?</h2>
-          <p>To be vague, I enjoy both the backend and frontend languages. My position at Stripe and querying languages were my gateway drug into understanding technology. As of late, I've enjoyed learning modern React syntax. I am open to learning so much more.</p>
+          <p>To be vague, I enjoy both backend and frontend languages. My position at Stripe and querying languages were my gateway drug into understanding technology. As of late, I've enjoyed learning modern React syntax. I am open to learning so much more.</p>
       </div>
     </div>
     </>
