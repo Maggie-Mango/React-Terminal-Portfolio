@@ -46,9 +46,9 @@ const About = () => {
           <h2>Where do you live?</h2>
           <p>NYC, there's no place like it ;)</p>
           <h2>What are your favorite hobbies?</h2>
-          <p>My favorite (i.e.) hobby is building things with React, cooking/hosting dinner parties, and trying new whiskies. When I had a bike, long-distance cycling also brought me joy</p>
+          <p>Currently, my favorite hobbies are building things with React, visualizing data in a beautiful way, cooking/hosting dinner parties, and trying new whiskies. When I had a bike, long-distance cycling also brought me joy.</p>
           <h2>Why do you want to be a software engineer?</h2>
-          <p>I love having the ability to build the app or feature you wish existed. I also love to teach and enjoy breaking down data science and programming concepts for those who want to learn.</p>
+          <p>Having the ability to build the app or feature you wish existed feels like a superpower. I also love to teach and enjoy breaking down data science and programming concepts for those who want to learn.</p>
           <h2>What languages and frameworks do you like best?</h2>
           <p>To be vague, I enjoy both the backend and frontend languages. My position at Stripe and querying languages were my gateway drug into understanding technology. As of late, I've enjoyed learning modern React syntax. I am open to learning so much more.</p>
       </div>
