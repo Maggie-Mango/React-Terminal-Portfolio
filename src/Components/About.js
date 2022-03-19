@@ -32,7 +32,7 @@ const About = () => {
       <Intro
         inputCb={updateInput}
         title="About Me"
-        inputLine="I used to be frightened by anything <i>technical</i>, now it's my creative outlet."
+        inputLine="Hello World If you're in NYC, let's grab coffee ☕"
       />
       <div>
         <img src="https://res.cloudinary.com/dousz4spf/image/upload/c_fill,g_auto,h_250,w_970/b_rgb:000000,e_gradient_fade,y_-0.50/c_scale,co_rgb:ffffff,fl_relative/v1647637759/7A8CBDCE-7A7E-42DC-A98E-4D854C6BF2CF_skvr2c.jpg" style={styles.img}  alt="atelier gif" />
