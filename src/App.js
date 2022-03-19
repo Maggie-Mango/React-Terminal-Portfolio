@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Terminal, { ColorMode, LineType } from 'react-terminal-ui';
 import Typewriter from 'typewriter-effect';
 import Resume from './Components/Resume.js';
@@ -35,18 +35,22 @@ import APIQuestions from './Components/APIQuestions.js';
         <br />
       </>
 
-
-
-const App = (props = {}) => {
-  const terminal = [
+const terminal = [
     {type: LineType.Output, value: Openingmessage},
     {type: LineType.Output, value: instructions},
     {type: LineType.Input, value:  `Check out my LinkedIn 🥸 linkedin.com/in/maggiesaldivia/` },
-    {type: LineType.Input, value: 'Get in touch 💌 maggiesaldivia@gmail.com' }
+    {type: LineType.Input, value: 'Get in touch 💌 maggiesaldivia@gmail.com' },
   ]
+
+
+
+
+const App = (props = {}) => {
+
+  const errors = ['resume', 'aboutme', 'apiquestions', 'soundtok', 'atelier']
+
   const [terminalLineData, setTerminalLineData] = useState(terminal);
   const [modal, setModal] = useState(null)
-
 
   if (modal === 'aboutme') {
     return (
@@ -91,7 +95,7 @@ const App = (props = {}) => {
   if (modal === 'apiquestions') {
     return (
       <>
-      <div class="container">
+      <div className="container">
         <APIQuestions />
       </div>
       </>
@@ -105,7 +109,7 @@ const App = (props = {}) => {
         colorMode={ ColorMode.Light }
         lineData={ terminalLineData }
         onInput={ terminalInput => {
-          terminal.indexOf(terminalInput) > -1 ? terminal.push( {type: LineType.Output, value: terminalInput}  ) : terminal.push( {type: LineType.Output, value: `-bash:  ${terminalInput}: command not found`} )
+          errors.indexOf(terminalInput.toLowerCase()) > -1 ? console.log('already there') : terminal.push( {type: LineType.Output, value: `-bash:  ${terminalInput}: command not found`} )
           setModal(terminalInput)
         }
         }
