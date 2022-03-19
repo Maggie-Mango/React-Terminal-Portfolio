@@ -93,7 +93,7 @@ const App = (props = {}) => {
   return (
     <div className="container">
       <Terminal
-        name='MAGGIE SALDIVIA PORTFOLIO'
+        name="MAGGIE'S PORTFOLIO"
         colorMode={ ColorMode.Light }
         lineData={ terminalLineData }
         onInput={ terminalInput => {
