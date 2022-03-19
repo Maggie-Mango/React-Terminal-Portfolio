@@ -37,12 +37,11 @@ import APIQuestions from './Components/APIQuestions.js';
 
 
 
-
-
 const App = (props = {}) => {
   const terminal = [
     {type: LineType.Output, value: Openingmessage},
     {type: LineType.Output, value: instructions},
+    {type: LineType.Input, value:  `check out my LinkedIn 🥸 linkedin.com/in/maggiesaldivia/` },
     {type: LineType.Input, value: 'Get in touch 💌 maggiesaldivia@gmail.com' }
   ]
   const [terminalLineData, setTerminalLineData] = useState(terminal);
