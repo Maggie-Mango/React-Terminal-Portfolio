@@ -1,9 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Terminal, { ColorMode, LineType } from 'react-terminal-ui';
 import Typewriter from 'typewriter-effect';
 import Resume from './Components/Resume.js';
 import Soundtok from './Components/Soundtok.js';
 import Atelier from './Components/Atelier.js';
+import About from './Components/About.js';
 import APIQuestions from './Components/APIQuestions.js';
 
 
@@ -12,11 +13,8 @@ import APIQuestions from './Components/APIQuestions.js';
       <Typewriter
       onInit={(typewriter) => {
         typewriter.typeString('Hi! 👋 My name is Maggie, a full-stack engineer based in NYC 🗽')
-          .callFunction(() => {
-            console.log('String typed out!');
-          })
           .pauseFor(2500)
-          .start();
+          .start()
       }}
       />
       <br />
@@ -37,23 +35,37 @@ import APIQuestions from './Components/APIQuestions.js';
         <br />
       </>
 
+const terminal = [
+    {type: LineType.Output, value: Openingmessage},
+    {type: LineType.Output, value: instructions},
+    {type: LineType.Input, value:  `Check out my LinkedIn 🥸 linkedin.com/in/maggiesaldivia/` },
+    {type: LineType.Input, value: 'Get in touch 💌 maggiesaldivia@gmail.com' },
+  ]
 
 
 
 
 const App = (props = {}) => {
-  const terminal = [
-    {type: LineType.Output, value: Openingmessage},
-    {type: LineType.Output, value: instructions},
-    {type: LineType.Input, value: 'Get in touch 💌 maggiesaldivia@gmail.com' }
-  ]
+
+  const errors = ['resume', 'aboutme', 'apiquestions', 'soundtok', 'atelier']
+
   const [terminalLineData, setTerminalLineData] = useState(terminal);
   const [modal, setModal] = useState(null)
+
+  if (modal === 'aboutme') {
+    return (
+      <>
+      <div className="container">
+        <About />
+      </div>
+    </>
+    )
+  }
 
   if (modal === 'resume') {
     return (
       <>
-      <div class="container">
+      <div className="container">
         <Resume />
       </div>
     </>
@@ -63,7 +75,7 @@ const App = (props = {}) => {
   if (modal === 'soundtok') {
     return (
       <>
-      <div class="container">
+      <div className="container">
         <Soundtok />
       </div>
       </>
@@ -73,7 +85,7 @@ const App = (props = {}) => {
   if (modal === 'atelier') {
     return (
       <>
-        <div class="container">
+        <div className="container">
           <Atelier />
         </div>
       </>
@@ -83,7 +95,7 @@ const App = (props = {}) => {
   if (modal === 'apiquestions') {
     return (
       <>
-      <div class="container">
+      <div className="container">
         <APIQuestions />
       </div>
       </>
@@ -97,8 +109,8 @@ const App = (props = {}) => {
         colorMode={ ColorMode.Light }
         lineData={ terminalLineData }
         onInput={ terminalInput => {
-          terminal.indexOf(terminalInput) > -1 ? terminal.push( {type: LineType.Output, value: terminalInput}  ) : terminal.push( {type: LineType.Output, value: `-bash:  ${terminalInput}: command not found`} )
-          setModal(terminalInput)
+          errors.indexOf(terminalInput.toLowerCase()) > -1 ? console.log('already there') : terminal.push( {type: LineType.Output, value: `-bash:  ${terminalInput}: command not found`} )
+          setModal(terminalInput.toLowerCase())
         }
         }
       />
