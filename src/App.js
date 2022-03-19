@@ -110,7 +110,7 @@ const App = (props = {}) => {
         lineData={ terminalLineData }
         onInput={ terminalInput => {
           errors.indexOf(terminalInput.toLowerCase()) > -1 ? console.log('already there') : terminal.push( {type: LineType.Output, value: `-bash:  ${terminalInput}: command not found`} )
-          setModal(terminalInput)
+          setModal(terminalInput.toLowerCase())
         }
         }
       />
