@@ -1,8 +1,5 @@
 import React, {useState, useEffect, useRef} from 'react';
 
-
-
-
 const Intro = ({inputCb, title, inputLine}) => {
 
   const [input, setInput] = useState("")
