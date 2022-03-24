@@ -32,7 +32,7 @@ const About = () => {
       <Intro
         inputCb={updateInput}
         title="About Me"
-        inputLine="Hello World If you're in NYC, let's grab coffee ☕"
+        inputLine="Hello World! If you're in NYC, let's grab coffee ☕"
       />
       <div>
         <img src="https://res.cloudinary.com/dousz4spf/image/upload/c_fill,g_auto,h_250,w_970/b_rgb:000000,e_gradient_fade,y_-0.50/c_scale,co_rgb:ffffff,fl_relative/v1647637759/7A8CBDCE-7A7E-42DC-A98E-4D854C6BF2CF_skvr2c.jpg" style={styles.img}  alt="atelier gif" />
@@ -44,7 +44,7 @@ const About = () => {
           <h2>Where I'm From</h2>
           <p>Born in Manila, Philippines 🇵🇭 || Grown in Portland, OR 🌲</p>
           <h2>Where do you live?</h2>
-          <p>NYC, there's no place like it ;)</p>
+          <p>NYC, there's no city like it ;)</p>
           <h2>What are your favorite hobbies?</h2>
           <p>Currently, my favorite hobbies are building things with React, visualizing data in a beautiful way, cooking/hosting dinner parties, and trying new whiskies. When I had a bike, long-distance cycling also brought me joy.</p>
           <h2>Why do you want to be a software engineer?</h2>
