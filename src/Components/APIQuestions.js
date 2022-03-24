@@ -43,7 +43,7 @@ const APIQuestions = () => {
        <div style={styles.soundtok}>
         <div>
           <h3>API</h3>
-          <p>Creating and scaling this API is thoroughly documented in my Notion <a href="https://aback-draw-7e0.notion.site/71ab63b02d6443f1b04ffd8b36203f84?v=1292a485a2de4973ad6e41b352df9883">journal</a>. This API uses a MySQL database and is able to handle 1,000 requests per second easily with a 0% error rate. It can also handle around 5,000 - 7,000 requests per second with around a 30% error rate.</p>
+          <p>Creating and scaling this API is thoroughly documented in my Notion <a href="https://aback-draw-7e0.notion.site/71ab63b02d6443f1b04ffd8b36203f84?v=1292a485a2de4973ad6e41b352df9883">journal</a>. This API uses a MySQL database and is able to handle 1,000 requests per second easily with a 0% error rate. It could also handle around 5,000 - 7,000 requests when load testing spiky traffic.</p>
           <h3>Scaling</h3>
           <p>The API used 3 EC2 Servers, query indexing, REDIS caching and an NGINX load balancer. The API was then stressed tested with spikey high volumes of traffic.</p>
             <img src="https://res.cloudinary.com/dousz4spf/image/upload/v1647651902/Screen_Shot_2022-03-18_at_9.04.40_PM_cwjebw.png" style={styles.img}  alt="performance" />
